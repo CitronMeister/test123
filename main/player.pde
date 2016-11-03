@@ -1,14 +1,17 @@
 class player { 
-
+  int playerX = 50;
+  
+  
   float playerYChange = 0;
   int playerheight = 50;
+  
   boolean jump = false;
   int jumpSpeed = 30; // lower == faster, higher == slower
   int jumpHeight = 300;
   void display() {
     pushStyle();
     fill(200, 0, 0);
-    rect(50, height-(height/10)-playerheight-playerYChange, playerheight, playerheight);
+    rect(playerX, height-(height/10)-playerheight-playerYChange, playerheight, playerheight);
     popStyle();
   }
   void jump() {
