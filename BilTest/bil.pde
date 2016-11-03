@@ -10,7 +10,7 @@ class bil {
   }
   void move(){
     if(x < width) {
-      x++;    
+      x++;
     }
   }
   
