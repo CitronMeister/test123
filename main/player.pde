@@ -1,16 +1,21 @@
 class player { 
 
   float playerYChange = 0;
-  int playerheight = 50;
+  int playerheight = 100;
   boolean jump = false;
-  int jumpSpeed = 30; // lower == faster, higher == slower
+  int jumpSpeed = 5; // higher == faster, lower == slower
   int jumpHeight = 300;
+
   void display() {
+    /*
     pushStyle();
     fill(200, 0, 0);
-    rect(50, height-(height/10)-playerheight-playerYChange, playerheight, playerheight);
+    rect(50, height-(height/9)-playerheight-playerYChange, playerheight, playerheight);
     popStyle();
+    */
+    image(PlayerImg, 50, height-(height/9)-playerheight-playerYChange, playerheight, playerheight);
   }
+
   void jump() {
     if (keyPressed) {
       if (playerYChange == 0) {
@@ -20,12 +25,12 @@ class player {
       }
     }
     if (jump == true) {
-      playerYChange += (jumpHeight/jumpSpeed);
+      playerYChange += jumpSpeed;
       if (playerYChange >= jumpHeight) {
         jump = false;
       }
     } else if (jump == false && playerYChange > 0) {
-      playerYChange -= jumpHeight/jumpSpeed;
+      playerYChange -= jumpSpeed;
     }
   }
 }
