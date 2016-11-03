@@ -10,10 +10,8 @@ class bil {
   }
   void move(){
     if(x < width) {
-      88886t8x++;
-      
+      x++;    
     }
-  
   }
   
 }
