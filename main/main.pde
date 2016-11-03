@@ -1,4 +1,4 @@
-bil bil1 = new bil();
+player p1 = new player();
 world w = new world();
 void setup(){
 fullScreen();
@@ -6,7 +6,7 @@ fullScreen();
 
 void draw(){
 background(0,0,0,70);
-bil1.display();
-bil1.move();
+p1.display();
+p1.move();
 w.world1();
 }
