@@ -5,8 +5,7 @@ fullScreen();
 }
 
 void draw(){
-background(0,0,0,70);
-p1.display();
-p1.move();
 w.world1();
+p1.display();
+p1.jump();
 }
