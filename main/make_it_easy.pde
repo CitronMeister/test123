@@ -10,3 +10,10 @@ void sky(float r, float g, float b){
   rect(0, 0, width, height- height/9);
   popStyle();
 }
+/*
+Clouds if ever needed.
+void clouds(float c){
+  pushStyle();
+  fill(c);
+  rect(0,0, width, height/10);
+}*/
