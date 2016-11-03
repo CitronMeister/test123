@@ -3,27 +3,23 @@ class enemy {
   float Height;
   float Colour;
   float Width;
-  float heightMultiplier = 3;
-  float x = 500;
+  float x = 500; // xloc for the enemy
+  float xSpeed = 3; // speed the enemy moves
+  float size = 50; // size of enemy currently only one value!
 
-
-  enemy() {
-  }
   void move() {
-    if(x > p1.playerX){
-      x--;    
+    if(x > 0 - size){
+      x -= xSpeed;    
     }
-  }
-  void randomHeight() {
-    Height = random(0, 10);
-  }
-  void randomWidth(){
-    Width = random(0, 10);
-  }
+    if(x <= 0 - size){
+      x = width + size;
+    }
+  }  
   void display(){
     pushStyle();
     fill(0, 200, 0);
-    rect(x, height-(height/10)-50, 50, 50);
+    rect(x, height-(height/10)-p1.playerheight, size, size);
     popStyle();
   }
+  
 }

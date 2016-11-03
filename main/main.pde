@@ -14,4 +14,5 @@ p1.display();
 p1.jump();
 e.display();
 e.move();
+p1.ifHit();
 }
