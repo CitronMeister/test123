@@ -2,6 +2,7 @@ player p1 = new player();
 world w = new world();
 void setup(){
 fullScreen();
+frameRate(60);
 }
 
 void draw(){
