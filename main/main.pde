@@ -1,12 +1,12 @@
-bil bil1 = new bil();
+player p1 = new player();
 
 void setup(){
 fullScreen();
 }
 
 void draw(){
-background(0,0,0,70);
-bil1.display();
-bil1.move();
+background(0,0,0);
+p1.display();
+p1.move();
 
 }
