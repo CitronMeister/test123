@@ -8,15 +8,14 @@ class enemy {
   float size = 50; // size of enemy currently only one value!
 
   enemy() {
-    Height = random(20, 50);
+    Height = random(1, 50);
     Width = random(1, 50);
     size = 50;
   }
-  void controller(){
+  void controller() {
     move();
     display();
   }
-
 
   void move() {
     if (x > 0 - size) {
