@@ -22,6 +22,8 @@ class enemy {
       x -= xSpeed;
     }
     if (x <= 0 - size) {
+      Height = random(1, 50);
+      Width = random(1, 50);
       x = width + size;
     }
   }  
@@ -30,5 +32,9 @@ class enemy {
     fill(#00FF39);
     rect(x, height-(height/9)-Height, Width, Height);
     popStyle();
+  }
+  void calcSize() {
+    Height = random(1, 50);
+    Width = random(1, 50);
   }
 }

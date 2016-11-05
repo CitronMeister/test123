@@ -47,9 +47,11 @@ class player {
     if (playerX >= e.x && height-(height/9) - playerYChange > height-(height/9) - e.Height) {
       health--;
       e.x = width;
+      e.Height = random(1, 50);
+      e.Width = random(1, 50);
     }
   }
-  void debugPlayer(){
+  void debugPlayer() {
     text(height-(height/9) - playerYChange, width/2, height/2);
     text(height-(height/9) - e.Height, width/2, height/2 + 40);
   }
