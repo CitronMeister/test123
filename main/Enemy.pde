@@ -7,19 +7,29 @@ class enemy {
   float xSpeed = 3; // speed the enemy moves
   float size = 50; // size of enemy currently only one value!
 
+  enemy() {
+    Height = random(20, 50);
+    Width = random(1, 50);
+    size = 50;
+  }
+  void controller(){
+    move();
+    display();
+  }
+
+
   void move() {
-    if(x > 0 - size){
-      x -= xSpeed;    
+    if (x > 0 - size) {
+      x -= xSpeed;
     }
-    if(x <= 0 - size){
+    if (x <= 0 - size) {
       x = width + size;
     }
   }  
-  void display(){
+  void display() {
     pushStyle();
-    fill(0, 200, 0);
-    rect(x, height-(height/10)-p1.playerheight, size, size);
+    fill(#00FF39);
+    rect(x, height-(height/9)-Height, Width, Height);
     popStyle();
   }
-  
 }

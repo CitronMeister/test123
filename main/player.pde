@@ -3,14 +3,25 @@ class player {
   float playerYChange; // players change in Y when jumping
   int playerheight = 50; // how tall is the player 
   boolean jump = false; // bool to test for going up or down
-  int jumpSpeed = 30; // lower == faster, higher == slower
+  int jumpSpeed = 10; // lower == faster, higher == slower
   int jumpHeight = 300; // how many pixels can player jump
   int health = 3; // amount of health the player has
-  
-  
-  
-  void display() {
+
+  void controller(){
+    UI();
+    display();
+    jump();
+    ifHit();
+  }
+
+  void UI() {
+    pushStyle();
+    textSize(24);
     text(health, 100, 100); // health shown
+    popStyle();
+  }
+
+  void display() {
     image(PlayerImg, playerX, height-(height/9)-playerheight-playerYChange, playerheight, playerheight);
   }
 
@@ -31,13 +42,10 @@ class player {
       playerYChange -= jumpSpeed;
     }
   }
-  void ifHit(){
-    if(playerX >= e.x && playerX <= e.size){
+  void ifHit() {
+    if (playerX >= e.x && playerX <= e.size) {
       health--;
       e.x = 500;
     }
-    
-    
-    
   }
 }
