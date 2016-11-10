@@ -1,9 +1,12 @@
 player p1 = new player();
 world w = new world();
 enemy e = new enemy();
+UI ui = new UI();
 
 PImage PlayerImg;
-
+PImage Hjerte3;
+PImage Hjerte2;
+PImage Hjerte1;
 void setup() {
   fullScreen();
   frameRate(144);
@@ -18,5 +21,5 @@ void draw() {
   w.world1();
   p1.controller();
   e.controller();
-
+  ui.display();
 }
