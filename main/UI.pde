@@ -1,6 +1,6 @@
-Class UI {    
+class UI {    
 
-  UI{
+  UI(){
   
   
   }
