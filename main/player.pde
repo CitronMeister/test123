@@ -1,7 +1,7 @@
 class player {   
-  int playerX = 50; // player xLoc
-  float playerYChange; // players change in Y when jumping
-  int playerHeight = 50; // how tall is the player 
+  int X = 50; // player xLoc
+  float YChange; // players change in Y when jumping
+  int Height = 50; // how tall is the player 
   boolean jump = false; // bool to test for going up or down
   int jumpSpeed = 13; // lower == faster, higher == slower
   int jumpHeight = 300; // how many pixels can player jump
