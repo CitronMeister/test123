@@ -7,8 +7,8 @@ class enemy {
   float xSpeed = 3; // speed the enemy moves
 
   enemy() {
-    Height = random(1, 50);
-    Width = random(1, 50);
+    Height = random(1,200);
+    Width = random(1, 200);
   }
   void controller() {
     move();
