@@ -6,7 +6,7 @@ PImage PlayerImg;
 
 void setup() {
   fullScreen();
-  frameRate(60);
+  frameRate(144);
   PlayerImg = loadImage("Mage128.png");
 }
 
