@@ -3,7 +3,7 @@ class player {
   float YChange; // players change in Y when jumping
   int Height = 50; // how tall is the player 
   boolean jump = false; // bool to test for going up or down
-  int jumpSpeed = 13; // lower == faster, higher == slower
+  int jumpSpeed = 8; // lower == faster, higher == slower
   int jumpHeight = 300; // how many pixels can player jump
   int health = 3; // amount of health the player has
 
