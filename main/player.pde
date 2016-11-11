@@ -8,11 +8,12 @@ class player {
   int health = 3; // amount of health the player has
 
   void controller() {
-    UI();
-    display();
-    jump();
-    ifHit();
-    debugPlayer();
+    if (gameStarted == 1) {
+      display();
+      jump();
+      ifHit();
+      debugPlayer();
+    }
   }
 
   void UI() {

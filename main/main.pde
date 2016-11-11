@@ -18,8 +18,8 @@ void setup() {
 }
 
 void draw() {
-  w.world1();
+  w.controller();
   p1.controller();
   e.controller();
-  ui.display();
+  ui.controller();
 }

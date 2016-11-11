@@ -1,5 +1,11 @@
 class UI {    
   
+  void controller(){
+    if(gameStarted == 1) {
+      display();
+    }
+  }
+  
   void display() {
     
     if (p1.health == 3)

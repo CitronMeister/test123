@@ -1,5 +1,5 @@
 // Vars
-int gameStarted;
+int gameStarted = 0;
 
 
 
