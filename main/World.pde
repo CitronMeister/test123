@@ -31,6 +31,7 @@ class world {
     if (mousePressed) {
       if (mouseX > width/2 - width/8 && mouseX < width/2 - width/8 + width/4 && mouseY > height/2 && mouseY < height/2 + height/15) {
         gameStarted = 1;
+        points = 0;
       }
       if (mouseX > width/2 - width/8 && mouseX < width/2 - width/8 + width/4 && mouseY > height/2 + height/12 && mouseY < height/2 + height/12 + height/15) {
         exit();
@@ -88,6 +89,7 @@ class world {
       if (mouseX > width/2 - width/8 && mouseX < width/2 - width/8 + width/4 && mouseY > height/2 + height/12 && mouseY < height/2 + height/15 + height/12) {
         gameStarted = 1;
         p1.health = 3;
+        points = 0;
       }
       if (mouseX > width/2 - width/8 && mouseX < width/2 - width/8 + width/4 && mouseY > height/2 + height/12 + height/12&& mouseY < height/2 + height/12 + height/15 + height/12) {
         gameStarted = 0;
