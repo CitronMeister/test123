@@ -1,16 +1,16 @@
 class UI {    
-  
-  void controller(){
-    if(gameStarted == 1) {
+
+  void controller() {
+    if (gameStarted == 1) {
       display();
     }
   }
-  
+
   void display() {
-    
+
     if (p1.health == 3)
     {
-     image(Hjerte3, height/9, width/9);
+      image(Hjerte3, height/9, width/9);
     }
     if (p1.health == 2)
     {
@@ -21,6 +21,4 @@ class UI {
       image(Hjerte1, height/9, width/9);
     }
   }
-
-
 }

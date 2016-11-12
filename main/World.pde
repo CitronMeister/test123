@@ -6,7 +6,6 @@ class world {
       menu();
     } else if (gameStarted == 1) {
       world1();
-      world2();
     } else if (gameStarted == 2) {
       gameover();
     }
@@ -17,15 +16,11 @@ class world {
     ground(90, 70, 50);
     popStyle();
   }
-  void world2() {
-    //sky();
-  }
   void menu() {
-
+    background(71);
     int HoverG = 150;
     int HoverR = 150;
-    // debug XD
-    text(width/2 - width/8, 100, 100);
+
     // Hover!!!!!
     if (mouseX > width/2 - width/8 && mouseX < width/2 - width/8 + width/4 && mouseY > height/2 && mouseY < height/2 + height/15) {
       HoverG = 210;
@@ -45,10 +40,8 @@ class world {
     pushStyle();
     textAlign(CENTER);
     textSize(24);
-    text("I hope you lose XD", width/2, height/2 - 50);
+    text("Play as ''Gandalf The Gay'' to save the univers!", width/2, height/2 - 50);
     popStyle();
-
-
 
     // StartGame
     pushStyle();
@@ -80,5 +73,58 @@ class world {
     popStyle();
   }
   void gameover() {
+    background(0);
+    int HoverG = 150;
+    int HoverR = 150;
+
+    // Hover!!!!!
+    if (mouseX > width/2 - width/8 && mouseX < width/2 - width/8 + width/4 && mouseY > height/2 + height/12 && mouseY < height/2 + height/15 + height/12) {
+      HoverG = 210;
+    }
+    if (mouseX > width/2 - width/8 && mouseX < width/2 - width/8 + width/4 && mouseY > height/2 + height/12 + height/12&& mouseY < height/2 + height/12 + height/15 + height/12) {
+      HoverR = 210;
+    }
+    if (mousePressed) {
+      if (mouseX > width/2 - width/8 && mouseX < width/2 - width/8 + width/4 && mouseY > height/2 + height/12 && mouseY < height/2 + height/15 + height/12) {
+        gameStarted = 1;
+        p1.health = 3;
+      }
+      if (mouseX > width/2 - width/8 && mouseX < width/2 - width/8 + width/4 && mouseY > height/2 + height/12 + height/12&& mouseY < height/2 + height/12 + height/15 + height/12) {
+        gameStarted = 0;
+        p1.health = 3;
+      }
+    }
+
+    pushStyle();
+    textAlign(CENTER);
+    textSize(24);
+    text("You Died", width/2, height/2 - 50 + height/12);
+    popStyle();
+
+    // StartGame
+    pushStyle();
+    textAlign(CENTER);
+    textSize(24);
+    fill(50, HoverG, 50);
+    noStroke();
+    rect(width/2 - width/8, height/2 + height/12, width/4, height/15);
+    popStyle();
+    pushStyle();
+    textAlign(CENTER);
+    textSize(24);
+    text("Restart", width/2, height/2 + height/24 + height/12);
+    popStyle();
+
+    // Back to menu
+    pushStyle();
+    noStroke();
+    fill(HoverR, 50, 50);
+    rect(width/2 - width/8, height/2 + height/12 + height/12, width/4, height/15);
+    popStyle();
+    pushStyle();
+    textAlign(CENTER);
+    textSize(24);
+    text("Back to Menu", width/2, height/2 + height/24 + height/12 + height/12);
+    popStyle();
   }
 }

@@ -12,17 +12,12 @@ class player {
       display();
       jump();
       ifHit();
-      debugPlayer();
+      ifDead();
+      //debugPlayer(); // Debug if ever needed.
+    } else {
+      ifDead();
     }
   }
-
-  void UI() {
-    pushStyle();
-    textSize(24);
-    text(health, 100, 100); // health shown
-    popStyle();
-  }
-
   void display() {
     rect(X, height-(height/9)-Height-YChange, Height, Height);
     image(PlayerImg, X, height-(height/9)-Height-YChange, Height, Height);
@@ -51,6 +46,11 @@ class player {
       e.x = width;
       e.Height = random(1, 50);
       e.Width = random(1, 50);
+    }
+  }
+  void ifDead() {
+    if (health < 1) {
+      gameStarted = 2;
     }
   }
   void debugPlayer() {
