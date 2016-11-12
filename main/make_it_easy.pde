@@ -1,6 +1,6 @@
 // Vars
 int gameStarted = 0;
-
+int points = 0;
 
 
 

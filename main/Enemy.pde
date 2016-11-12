@@ -7,8 +7,8 @@ class enemy {
   float xSpeed = 8; // speed the enemy moves
 
   enemy() {
-    Height = random(1, 200);
-    Width = random(1, 200);
+    Height = random(30, 150);
+    Width = random(30, 150);
   }
   void controller() {
     if (gameStarted == 1) {
@@ -20,11 +20,12 @@ class enemy {
   void move() {
     if (x > 0 - Width) {
       x -= xSpeed;
+      
     }
     if (x <= 0 - Width) {
-      Height = random(1, 200);
-      Width = random(1, 200);
+      calcSize();
       x = width + Width;
+      points += 1;
     }
   }  
   void display() {
@@ -34,7 +35,7 @@ class enemy {
     popStyle();
   }
   void calcSize() {
-    Height = random(1, 200);
-    Width = random(1, 200);
+    Height = random(30, 150);
+    Width = random(30, 150);
   }
 }

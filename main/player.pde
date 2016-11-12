@@ -19,7 +19,7 @@ class player {
     }
   }
   void display() {
-    rect(X, height-(height/9)-Height-YChange, Height, Height);
+    //rect(X, height-(height/9)-Height-YChange, Height, Height);
     image(PlayerImg, X, height-(height/9)-Height-YChange, Height, Height);
   }
 
