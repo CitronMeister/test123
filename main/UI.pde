@@ -24,9 +24,9 @@ class UI {
   }
   void points() {
     pushStyle();
-    textSize(24);
+    textSize(40);
     textAlign(CENTER);
-    text("Current Points: " + points, width/2, height/12);
+    text(points, width/2, height/12);
     popStyle();
   }
 }
