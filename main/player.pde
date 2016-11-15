@@ -8,7 +8,7 @@ class player {
   int health = 3; // amount of health the player has
 
   void controller() {
-    if (gameStarted == 1) {
+    if (gameStarted >= 1) {
       display();
       jump();
       ifHit();
@@ -27,7 +27,12 @@ class player {
     if (keyPressed) {
       if (YChange == 0) {
         if (key == ' ') {
+          if(gameStarted == 2){
           jump = true;
+          }
+          if(gameStarted == 1){
+            gameStarted = 2;
+          }
         }
       }
     }
@@ -50,7 +55,7 @@ class player {
   }
   void ifDead() {
     if (health < 1) {
-      gameStarted = 2;
+      gameStarted = -1;
     }
   }
   void debugPlayer() {

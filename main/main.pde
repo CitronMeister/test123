@@ -7,6 +7,7 @@ PImage PlayerImg;
 PImage Hjerte3;
 PImage Hjerte2;
 PImage Hjerte1;
+
 void setup() {
   fullScreen();
   frameRate(144);

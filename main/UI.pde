@@ -1,7 +1,7 @@
 class UI {    
 
   void controller() {
-    if (gameStarted == 1) {
+    if (gameStarted >= 1) {
       displayH();
       points();
     }

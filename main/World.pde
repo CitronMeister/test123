@@ -4,9 +4,9 @@ class world {
   void controller() {
     if (gameStarted == 0) {
       menu();
-    } else if (gameStarted == 1) {
+    } else if (gameStarted >= 1) {
       world1();
-    } else if (gameStarted == 2) {
+    } else if (gameStarted == -1) {
       gameover();
     }
   }
