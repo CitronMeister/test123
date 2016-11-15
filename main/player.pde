@@ -19,6 +19,7 @@ class player {
     }
   }
   void display() {
+    // this is just a model behind the player which the picture fills out and is simply just the hitbox of the player
     //rect(X, height-(height/9)-Height-YChange, Height, Height);
     image(PlayerImg, X, height-(height/9)-Height-YChange, Height, Height);
   }
@@ -46,11 +47,13 @@ class player {
     }
   }
   void ifHit() {
+    // when the player is hit, the player returns to the ground, while losing a life.
     if (e.x < X + Height && e.x > X && YChange < e.Height || e.x + e.Width < X + Height && e.x + e.Width > X && YChange < e.Height) {
       health--;
       e.x = width;
       e.Height = random(1, 50);
       e.Width = random(1, 50);
+      jump = false;
     }
   }
   void ifDead() {

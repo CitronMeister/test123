@@ -7,6 +7,7 @@ PImage PlayerImg;
 PImage Hjerte3;
 PImage Hjerte2;
 PImage Hjerte1;
+PImage Enemy;
 
 void setup() {
   fullScreen();
@@ -15,6 +16,7 @@ void setup() {
   Hjerte3 = loadImage("Hjerte3.png");
   Hjerte2 = loadImage("Hjerte2.png");
   Hjerte1 = loadImage("Hjerte1.png");
+  Enemy = loadImage("Cactus2.png");
   
 }
 
