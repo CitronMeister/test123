@@ -100,7 +100,7 @@ class world {
     pushStyle();
     textAlign(CENTER);
     textSize(24);
-    text("You Died", width/2, height/2 - 50 + height/12);
+    text("You Were Kill!", width/2, height/2 - 50 + height/12);
     popStyle();
 
     // StartGame
@@ -114,7 +114,7 @@ class world {
     pushStyle();
     textAlign(CENTER);
     textSize(24);
-    text("Restart", width/2, height/2 + height/24 + height/12);
+    text("But what if Gandalf wasn't kill? (restart)", width/2, height/2 + height/24 + height/12);
     popStyle();
 
     // Back to menu
