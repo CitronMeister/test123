@@ -4,7 +4,7 @@ class enemy {
   float Colour;
   float Width;
   float x = 1000; // xloc for the enemy
-  float xSpeed = 3; // speed the enemy moves
+  float xSpeed = 10; // speed the enemy moves
 
   enemy() {
     Height = random(30, 150);

@@ -113,8 +113,8 @@ class world {
     popStyle();
     pushStyle();
     textAlign(CENTER);
-    textSize(24);
-    text("But what if Gandalf wasn't kill? (restart)", width/2, height/2 + height/24 + height/12);
+    textSize(20);
+    text("But what if Gandalf wasn't kill?", width/2, height/2 + height/24 + height/12);
     popStyle();
 
     // Back to menu
